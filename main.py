@@ -8,7 +8,6 @@ def sniff(interface):
 
 def process_sniffed_packet(packet):
     if packet.haslayer(http.HTTPRequest):
-        print(packet.show())
         print("----------")
         # get url and Http Method and print them
         url = packet[http.HTTPRequest].Host.decode("utf-8") + packet[
