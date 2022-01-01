@@ -25,7 +25,6 @@ def process_sniffed_packet(packet):
             for term in keywords:
                 if term in payload:
                     print("> Payload captured: %s" % payload)
-                    # if more than one term is in the payload, we just want to print it one time, so we are breaking the loop
                     break
 
 
